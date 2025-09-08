@@ -26,7 +26,14 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-gray-50/80 dark:bg-dark-900/80 backdrop-blur border-b border-gray-200/60 dark:border-dark-50/20">
       <div className="container-base flex items-center justify-between h-16">
-        <a href="#home" className="font-semibold text-xl">Logo</a>
+        <a href="#home" className="flex items-center gap-2" aria-label="Logo">
+          <img
+            src={isDark ? asset('logo modo escuro.png') : asset('logo modo claro.png')}
+            alt=""
+            className="h-8 w-auto block"
+            loading="eager"
+          />
+        </a>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {navItems.map((item) => (
             <a key={item.id} href={`#${item.id}`} className="hover:text-gray-600 dark:hover:text-dark-100">

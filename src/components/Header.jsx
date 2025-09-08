@@ -42,6 +42,7 @@ export default function Header() {
               <img src="/lua.png" alt="Dark" className="w-5 h-5" />
             )}
           </button>
+        </div>
       </div>
     </header>
   )

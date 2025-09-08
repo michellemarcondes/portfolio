@@ -13,9 +13,9 @@ export default function Hero() {
           <div className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>Disponível para novos projetos</div>
         </div>
         <div className="flex items-center gap-4 pt-2">
-          <a href="https://github.com/" target="_blank" className="hover:opacity-80"><img src={asset('git icon escuro.png')} alt="GitHub" className="w-6 h-6" /></a>
-          <a href="https://twitter.com/" target="_blank" className="hover:opacity-80"><img src={asset('instagram escuro.png')} alt="Twitter" className="w-6 h-6" /></a>
-          <a href="https://linkedin.com/" target="_blank" className="hover:opacity-80"><img src={asset('linkedin escuro icon.png')} alt="LinkedIn" className="w-6 h-6" /></a>
+          <a href="https://github.com/" target="_blank" className="hover:opacity-80"><img src={asset('git claro icon.png')} alt="GitHub" className="w-6 h-6" /></a>
+          <a href="https://instagram.com/" target="_blank" className="hover:opacity-80"><img src={asset('instagram escuro.png')} alt="Instagram" className="w-6 h-6" /></a>
+          <a href="https://linkedin.com/" target="_blank" className="hover:opacity-80"><img src={asset('linkedin claro icon.png')} alt="LinkedIn" className="w-6 h-6" /></a>
         </div>
       </div>
       <div className="flex justify-center md:justify-end">

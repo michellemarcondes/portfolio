@@ -20,7 +20,7 @@ export default function Certificates() {
   return (
     <div>
       <div className="text-center mb-6">
-        <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-dark-50/20 text-sm">Certificates</span>
+        <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-dark-50/20 text-sm">Certificados</span>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {certs.map((c) => (

@@ -10,7 +10,7 @@ const items = [
   { src: asset('mongo icon.png'), label: 'MongoDB' },
   { src: asset('figma icon.png'), label: 'Figma' },
   { src: asset('power bi icon.png'), label: 'Power Bi' },
-  { src: asset('git claro icon .png'), label: 'Git' },
+  { src: asset('git claro icon.png'), label: 'Git' },
 ]
 
 export default function Skills() {

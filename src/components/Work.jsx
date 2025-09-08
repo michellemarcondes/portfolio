@@ -3,9 +3,9 @@ import { asset } from '../utils/asset'
 
 const projects = [
   {
-    title: 'Fiskil',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.',
-    images: [asset('logo modo claro.png'), asset('logo modo escuro.png')],
+    title: 'Empower Tech',
+    description: 'O Empower Tech foi desenvolvido em 2023 pelo grupo 5 do projeto PESQ da Fundação Bradesco Campinas, reunindo alunos da 1ª, 2ª e 3ª série do Ensino Médio. A iniciativa consistiu na criação de um bracelete inteligente capaz de se comunicar com um aplicativo móvel para acionar contatos de emergência em situações de risco. O 2º ano foi responsável pela parte física (robótica), o 3º ano pelo desenvolvimento do app, enquanto minha contribuição no 1º ano envolveu a identidade visual e a presença digital do projeto. Atuei na criação de mídias sociais, banners, panfletos, logo e no desenvolvimento de uma landing page para a divulgação do produto.',
+    images: [asset('banner.png'), asset('panfleto.png')],
     techs: ['React', 'Next.js', 'Typescript', 'Node.js', 'PostgreSQL', 'Tailwindcss', 'Figma', 'Cypress', 'Storybook', 'Git'],
     link: 'https://example.com'
   },

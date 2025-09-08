@@ -6,7 +6,8 @@ export default function Hero() {
       <div className="space-y-5">
         <h1 className="text-4xl md:text-6xl font-extrabold">Michelle Marcondes</h1>
         <p className="max-w-xl text-gray-600 dark:text-dark-200">
-          I'm a full stack developer (React.js & Node.js) with a focus on creating exceptional digital experiences that are fast, accessible, and responsive.
+        Sou aspirante ás Ciências Contábeis, com formação técnica em Análise e Desenvolvimento de Sistemas. 
+        Tenho interesse em contabilidade e busco oportunidades que me permitam aprender, crescer e contribuir para o ambiente corporativo.
         </p>
         <div className="space-y-2 text-sm">
           <div className="flex items-center gap-2"><img src={asset('localizacao escuro.png')} alt="loc" className="w-5 h-5" /><span>Campinas, Brasil</span></div>

@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import { asset } from '../utils/asset'
 
 const certs = [
-  { src: '/Certificado Apice.pdf', title: 'Apice' },
-  { src: '/Certificado CSS.pdf', title: 'CSS' },
-  { src: '/Certificado HTML.pdf', title: 'HTML' },
-  { src: '/Certificado JS.pdf', title: 'JS' },
-  { src: '/certificado OBI 2023.pdf', title: 'OBI' },
+  { src: asset('Certificado Apice.pdf'), title: 'Apice' },
+  { src: asset('Certificado CSS.pdf'), title: 'CSS' },
+  { src: asset('Certificado HTML.pdf'), title: 'HTML' },
+  { src: asset('Certificado JS.pdf'), title: 'JS' },
+  { src: asset('certificado OBI 2023.pdf'), title: 'OBI' },
 ]
 
 export default function Certificates() {

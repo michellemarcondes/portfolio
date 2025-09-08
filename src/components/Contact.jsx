@@ -10,9 +10,9 @@ export default function Contact() {
         </div>
       </div>
       <div className="flex items-center justify-center gap-4 mt-6">
-        <a href="https://github.com/" target="_blank"><img src="/git icon escuro.png" className="w-5" /></a>
-        <a href="https://twitter.com/" target="_blank"><img src="/instagram escuro.png" className="w-5" /></a>
-        <a href="https://linkedin.com/" target="_blank"><img src="/linkedin escuro icon.png" className="w-5" /></a>
+        <a href="https://github.com/" target="_blank" aria-label="GitHub" className="underline">GitHub</a>
+        <a href="https://twitter.com/" target="_blank" aria-label="Twitter" className="underline">Twitter</a>
+        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" className="underline">LinkedIn</a>
       </div>
     </div>
   )

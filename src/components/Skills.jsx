@@ -1,14 +1,16 @@
+import { asset } from '../utils/asset'
+
 const items = [
-  { src: '/JS icon.png', label: 'Javascript' },
-  { src: '/html icon.png', label: 'HTML' },
-  { src: '/exel icon.png', label: 'Exel' },
-  { src: '/react icon.png', label: 'React' },
-  { src: '/logo modo escuro.png', label: 'Node.js' },
-  { src: '/sql icon.png', label: 'PostgreSQL' },
-  { src: '/mongo icon.png', label: 'MongoDB' },
-  { src: '/figma icon.png', label: 'Figma' },
-  { src: '/power bi icon.png', label: 'Power Bi' },
-  { src: '/git icon escuro.png', label: 'Git' },
+  { src: asset('JS icon.png'), label: 'Javascript' },
+  { src: asset('html icon.png'), label: 'HTML' },
+  { src: asset('exel icon.png'), label: 'Exel' },
+  { src: asset('react icon.png'), label: 'React' },
+  { src: asset('logo modo escuro.png'), label: 'Node.js' },
+  { src: asset('sql icon.png'), label: 'PostgreSQL' },
+  { src: asset('mongo icon.png'), label: 'MongoDB' },
+  { src: asset('figma icon.png'), label: 'Figma' },
+  { src: asset('power bi icon.png'), label: 'Power Bi' },
+  { src: asset('git icon escuro.png'), label: 'Git' },
 ]
 
 export default function Skills() {

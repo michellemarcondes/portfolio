@@ -1,17 +1,18 @@
 import Slider from 'react-slick'
+import { asset } from '../utils/asset'
 
 const projects = [
   {
     title: 'Fiskil',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.',
-    images: ['/logo modo claro.png', '/logo modo escuro.png'],
+    images: [asset('logo modo claro.png'), asset('logo modo escuro.png')],
     techs: ['React', 'Next.js', 'Typescript', 'Node.js', 'PostgreSQL', 'Tailwindcss', 'Figma', 'Cypress', 'Storybook', 'Git'],
     link: 'https://example.com'
   },
   {
     title: 'Another',
     description: 'Project description goes here.',
-    images: ['/perfil img.jpg', '/sobre mim img.jpg'],
+    images: [asset('perfil img.jpg'), asset('sobre mim img.jpg')],
     techs: ['React', 'Vite', 'TailwindCSS'],
     link: 'https://example.com'
   }

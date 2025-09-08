@@ -1,8 +1,10 @@
+import { asset } from '../utils/asset'
+
 export default function AboutMe() {
   return (
     <div className="grid md:grid-cols-2 gap-10 items-start">
       <div className="card p-4 md:p-6">
-        <img src="/sobre mim img.jpg" alt="About" className="rounded-lg" />
+        <img src={asset('sobre mim img.jpg')} alt="About" className="rounded-lg" />
       </div>
       <div className="space-y-4">
         <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-dark-50/20 text-sm">About me</span>

@@ -1,9 +1,5 @@
 import Slider from 'react-slick'
-
-const images = [
-  '/public/Certificado Harvard.pdf',
-  '/public/Certificado HTML.pdf',
-]
+import { asset } from '../utils/asset'
 
 export default function Experience() {
   const settings = {
@@ -23,7 +19,7 @@ export default function Experience() {
       <p className="mt-3 text-gray-600 dark:text-dark-200">Here is a quick summary of my most recent experiences:</p>
       <div className="mt-6 card p-4">
         <Slider {...settings}>
-          {["/public/logo modo claro.png"].map((src, idx) => (
+          {[asset('logo modo claro.png')].map((src, idx) => (
             <div key={idx} className="px-4">
               <img src={src} className="rounded-lg mx-auto" />
             </div>

@@ -4,9 +4,9 @@ import { asset } from '../utils/asset'
 const projects = [
   {
     title: 'Empower Tech',
-    description: 'O Empower Tech foi desenvolvido em 2023 pelo grupo 5 do projeto PESQ da Fundação Bradesco Campinas, reunindo alunos da 1ª, 2ª e 3ª série do Ensino Médio. A iniciativa consistiu na criação de um bracelete inteligente capaz de se comunicar com um aplicativo móvel para acionar contatos de emergência em situações de risco. O 2º ano foi responsável pela parte física (robótica), o 3º ano pelo desenvolvimento do app, enquanto minha contribuição no 1º ano envolveu a identidade visual e a presença digital do projeto. Atuei na criação de mídias sociais, banners, panfletos, logo e no desenvolvimento de uma landing page para a divulgação do produto.',
+    description: 'O Empower Tech foi criado em 2023 no âmbito do projeto PESQ da Fundação Bradesco Campinas, envolvendo a colaboração de alunos da 1ª, 2ª e 3ª séries do Ensino Médio. O objetivo era desenvolver um dispositivo de apoio à segurança das mulheres, unindo tecnologia e responsabilidade social. O resultado foi um bracelete inteligente, capaz de se conectar a um aplicativo móvel via Bluetooth e Wi-Fi, enviando alertas para contatos de emergência quando o botão fosse pressionado três vezes. O desenvolvimento foi dividido entre as séries: o 2º ano ficou responsável pela parte física e eletrônica do bracelete, enquanto o 3º ano cuidou da programação do aplicativo. Já no 1º ano, minha função foi voltada à comunicação e identidade visual do projeto. Atuei no design de banners, panfletos e logotipo, além de gerenciar as redes sociais e estratégias de divulgação. Também fui responsável pela criação de uma landing page funcional, desenvolvida em HTML, CSS e JavaScript puro, com foco em clareza, navegação simples e apresentação do produto. Essa experiência permitiu alinhar tecnologia, design e comunicação em um projeto com propósito social, destacando o poder da inovação colaborativa.',
     images: [asset('banner.png'), asset('panfleto.png')],
-    techs: ['React', 'Next.js', 'Typescript', 'Node.js', 'PostgreSQL', 'Tailwindcss', 'Figma', 'Cypress', 'Storybook', 'Git'],
+    techs: ['HTML', 'CSS', 'JavaScript', 'Trabalho em equipe', 'UX', 'Desing', 'Figma', 'Social Midia'],
     link: 'https://example.com'
   },
   {

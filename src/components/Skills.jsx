@@ -1,6 +1,7 @@
+import { useEffect, useState } from 'react'
 import { asset } from '../utils/asset'
 
-const items = [
+const baseItems = [
   { src: asset('JS icon.png'), label: 'Javascript' },
   { src: asset('html icon.png'), label: 'HTML' },
   { src: asset('exel icon.png'), label: 'Exel' },
@@ -10,14 +11,42 @@ const items = [
   { src: asset('mongo icon.png'), label: 'MongoDB' },
   { src: asset('figma icon.png'), label: 'Figma' },
   { src: asset('power bi icon.png'), label: 'Power Bi' },
-  { src: asset('git claro icon.png'), label: 'Git' },
+  // GitHub será tratado separado
 ]
 
 export default function Skills() {
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    // Pega o tema atual
+    setIsDark(document.body.classList.contains('dark'))
+
+    // Observa mudanças no body
+    const observer = new MutationObserver(() => {
+      setIsDark(document.body.classList.contains('dark'))
+    })
+
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] })
+
+    return () => observer.disconnect()
+  }, [])
+
+  const items = [
+    ...baseItems,
+    { 
+      src: isDark ? asset('git escuro icon.png') : asset('git claro icon.png'), 
+      label: 'Git' 
+    }
+  ]
+
   return (
     <div className="text-center">
-      <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-dark-50/20 text-sm">Habilidades</span>
-      <p className="mt-3 text-gray-600 dark:text-dark-200">As habilidades e tecnologias que eu conheço são:</p>
+      <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-dark-50/20 text-sm">
+        Habilidades
+      </span>
+      <p className="mt-3 text-gray-600 dark:text-dark-200">
+        As habilidades e tecnologias que eu conheço são:
+      </p>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 mt-8">
         {items.map((it) => (
           <div key={it.label} className="flex flex-col items-center gap-2">

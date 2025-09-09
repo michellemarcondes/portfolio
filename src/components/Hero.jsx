@@ -5,8 +5,17 @@ export default function Hero() {
   const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
-    const current = document.body.classList.contains('dark')
-    setIsDark(current)
+    // Inicializa com o tema atual
+    setIsDark(document.body.classList.contains('dark'))
+
+    // Observa mudanças na classe do body
+    const observer = new MutationObserver(() => {
+      setIsDark(document.body.classList.contains('dark'))
+    })
+
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] })
+
+    return () => observer.disconnect()
   }, [])
 
   return (
@@ -14,7 +23,7 @@ export default function Hero() {
       <div className="space-y-5">
         <h1 className="text-4xl md:text-6xl font-extrabold">Michelle Marcondes</h1>
         <p className="max-w-xl text-gray-600 dark:text-dark-200">
-          Sou aspirante ás Ciências Contábeis, com formação técnica em Análise e Desenvolvimento de Sistemas. 
+          Sou aspirante às Ciências Contábeis, com formação técnica em Análise e Desenvolvimento de Sistemas. 
           Tenho interesse em contabilidade e busco oportunidades que me permitam aprender, crescer e contribuir para o ambiente corporativo.
         </p>
         <div className="space-y-2 text-sm">

@@ -30,7 +30,7 @@ export default function Header() {
           <img
             src={isDark ? asset('logo modo escuro.png') : asset('logo modo claro.png')}
             alt=""
-            className="h-8 w-auto block"
+            className="h-12 w-auto block"
             loading="eager"
           />
         </a>

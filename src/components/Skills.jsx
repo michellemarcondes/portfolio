@@ -19,16 +19,27 @@ export default function Skills() {
 
   useEffect(() => {
     // Pega o tema atual
-    setIsDark(document.body.classList.contains('dark'))
+    const checkTheme = () => {
+      setIsDark(document.body.classList.contains('dark'))
+    }
+    
+    // Verifica o tema inicial
+    checkTheme()
 
     // Observa mudanças no body
-    const observer = new MutationObserver(() => {
-      setIsDark(document.body.classList.contains('dark'))
-    })
-
+    const observer = new MutationObserver(checkTheme)
     observer.observe(document.body, { attributes: true, attributeFilter: ['class'] })
 
-    return () => observer.disconnect()
+    // Também escuta mudanças no localStorage
+    const handleStorageChange = () => {
+      checkTheme()
+    }
+    window.addEventListener('storage', handleStorageChange)
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('storage', handleStorageChange)
+    }
   }, [])
 
   const items = [
@@ -38,6 +49,9 @@ export default function Skills() {
       label: 'Git' 
     }
   ]
+
+  // Debug para verificar se o tema está sendo detectado corretamente
+  console.log('Skills - isDark:', isDark)
 
   return (
     <div className="text-center">

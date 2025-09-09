@@ -57,7 +57,7 @@ export default function Hero() {
           {/* Instagram */}
           <a href="https://instagram.com/" target="_blank" className="hover:opacity-80">
             <img 
-              src={isDark ? asset('instagram escuro.png') : asset('instagram claro.png')} 
+              src={isDark ? asset('instagram claro.png') : asset('instagram escuro.png')} 
               alt="Instagram" 
               className="w-6 h-6" 
             />

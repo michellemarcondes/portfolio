@@ -14,6 +14,7 @@ npm run dev
 1. Atualize o campo `homepage` em `package.json` com seu usuário do GitHub.
 2. Execute:
 
+3. Para atualizar as alterações feitas no link rode:
 ```
 npm run deploy
 ```

@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import AboutMe from './components/AboutMe'
@@ -6,10 +7,11 @@ import Work from './components/Work'
 import Certificates from './components/Certificates'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import WorkPage from './pages/WorkPage'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-function App() {
+function Home() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-dark-900 dark:text-dark-100">
       <Header />
@@ -23,6 +25,17 @@ function App() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <Router basename="/portfolio">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work" element={<WorkPage />} />
+      </Routes>
+    </Router>
   )
 }
 

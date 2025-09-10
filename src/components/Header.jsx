@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { asset } from '../utils/asset'
 
 const navItems = [
@@ -35,11 +36,14 @@ export default function Header() {
           />
         </a>
         <nav className="hidden md:flex items-center gap-6 text-sm">
-          {navItems.map((item) => (
-            <a key={item.id} href={`#${item.id}`} className="hover:text-gray-600 dark:hover:text-dark-100">
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            const href = item.id === 'work' ? '/work' : `#${item.id}`
+            return (
+              <a key={item.id} href={href} className="hover:text-gray-600 dark:hover:text-dark-100">
+                {item.label}
+              </a>
+            )
+          })}
         </nav>
         <div className="flex items-center gap-3">
           <a href={asset('Curriculo Michelle.pdf')} download className="px-3 py-1.5 rounded-full bg-gray-900 text-gray-50 dark:bg-dark-50/20 dark:text-dark-100 border border-gray-900 dark:border-dark-50/40 text-sm">Download CV</a>

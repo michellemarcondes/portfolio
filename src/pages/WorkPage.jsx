@@ -1,5 +1,6 @@
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import Slider from 'react-slick'
-import { Link } from 'react-router-dom'
 import { asset } from '../utils/asset'
 
 const projects = [
@@ -62,7 +63,7 @@ const projects = [
   }
 ]
 
-export default function Work() {
+export default function WorkPage() {
   const settings = {
     dots: true,
     arrows: true,
@@ -73,66 +74,63 @@ export default function Work() {
   }
 
   return (
-    <div>
-      <div className="text-center mb-6">
-        <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-dark-50/20 text-sm">
-          Work
-        </span>
-        <p className="mt-3 text-gray-600 dark:text-dark-200">
-          Some of the noteworthy projects I have built:
-        </p>
-      </div>
-      <div className="space-y-10">
-        {projects.slice(0, 3).map((p) => (
-          <div
-            key={p.title}
-            className="grid md:grid-cols-2 gap-6 card p-4 md:p-6"
-          >
-            <div>
-              <Slider {...settings}>
-                {p.images.map((img, i) => (
-                  <div key={i} className="px-2">
-                    <img src={img} className="rounded-lg" />
-                  </div>
-                ))}
-              </Slider>
-            </div>
-            <div className="flex flex-col gap-3">
-              <h3 className="text-xl font-semibold">{p.title}</h3>
-              <p className="text-gray-600 dark:text-dark-200 whitespace-pre-line">
-                {p.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {p.techs.map((t) => (
-                  <span
-                    key={t}
-                    className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-dark-50/20"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-              <div>
-                <a
-                  href={p.link}
-                  target="_blank"
-                  className="inline-flex items-center gap-2 text-sm underline"
-                >
-                  Visitar projeto <span>↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        ))}
-        <div className="text-center">
-          <Link
-            to="/work"
-            className="inline-block px-6 py-3 rounded-xl bg-black text-white dark:bg-gray-700"
-          >
-            Conheça mais projetos →
-          </Link>
+    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-dark-900 dark:text-dark-100">
+      <Header />
+      <main className="container-base py-10">
+        <div className="text-center mb-6">
+          <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-dark-50/20 text-sm">
+            Work
+          </span>
+          <p className="mt-3 text-gray-600 dark:text-dark-200">
+            All of my noteworthy projects:
+          </p>
         </div>
-      </div>
+        <div className="space-y-10">
+          {projects.map((p) => (
+            <div
+              key={p.title}
+              className="grid md:grid-cols-2 gap-6 card p-4 md:p-6"
+            >
+              <div>
+                <Slider {...settings}>
+                  {p.images.map((img, i) => (
+                    <div key={i} className="px-2">
+                      <img src={img} className="rounded-lg" />
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+              <div className="flex flex-col gap-3">
+                <h3 className="text-xl font-semibold">{p.title}</h3>
+                <p className="text-gray-600 dark:text-dark-200 whitespace-pre-line">
+                  {p.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {p.techs.map((t) => (
+                    <span
+                      key={t}
+                      className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-dark-50/20"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <div>
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm underline"
+                  >
+                    Visitar projeto <span>↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+      <Footer />
     </div>
   )
 }
